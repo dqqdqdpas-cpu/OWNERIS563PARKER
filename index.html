@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OWNER IS 563_PARKER — AI Video Background Studio</title>
+<style>
+:root{--bg:#080b10;--panel:#111720;--panel2:#171f2b;--line:#273241;--muted:#8d9aab;--text:#f4f7fb;--lime:#c5ff4a;--lime2:#a6e82e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -15%,#1d2b36 0,transparent 45%),var(--bg);color:var(--text);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+button,input,textarea{font:inherit}button{cursor:pointer;border:0}.top{height:68px;border-bottom:1px solid #202a36;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:#090d13d9;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.4px;font-size:18px}.logo{width:34px;height:34px;border-radius:11px;background:var(--lime);color:#10150b;display:grid;place-items:center;font-size:20px}.brand span{color:var(--lime)}.topright{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:12px}.pill{border:1px solid #344151;border-radius:99px;padding:7px 12px;color:#dce5ef}
+main{max-width:1440px;margin:auto;padding:32px 5vw 60px}.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px;gap:20px}.eyebrow{color:var(--lime);font-weight:800;letter-spacing:2px;font-size:10px;text-transform:uppercase}.heading h1{font-size:clamp(27px,4vw,42px);line-height:1.05;margin:8px 0}.heading p{color:var(--muted);margin:0;max-width:600px}.status{font-size:11px;color:#c9d3df;background:#141d27;border:1px solid #2a3645;padding:9px 13px;border-radius:9px;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,.85fr);gap:18px;align-items:start}.panel{background:linear-gradient(150deg,#141c26,#0f151d);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 16px 50px #0003}.panelhead{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.panelhead strong{font-size:13px}.tiny{font-size:11px;color:var(--muted)}.stage{padding:16px}.screen{position:relative;aspect-ratio:16/9;background:radial-gradient(ellipse at 50% 80%,#27333e,#0a0f15 70%);border-radius:10px;overflow:hidden;display:grid;place-items:center;border:1px solid #2b3745}.screen canvas{width:100%;height:100%;object-fit:contain;display:none}.empty{text-align:center;padding:25px}.uploadicon{margin:0 auto 13px;width:54px;height:54px;border:1px dashed #536273;border-radius:16px;display:grid;place-items:center;font-size:25px;color:var(--lime)}.empty h3{margin:0 0 5px;font-size:16px}.empty p{color:var(--muted);font-size:12px;margin:0 0 15px}.btn{padding:10px 14px;border-radius:9px;font-weight:750;font-size:12px;transition:.15s}.primary{background:var(--lime);color:#12170b}.primary:hover{background:#d5ff7a;transform:translateY(-1px)}.secondary{background:#202b38;color:#eaf0f6;border:1px solid #344252}.secondary:hover{background:#293747}.danger{background:#38252a;color:#ffb8bd}.controls{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}.controls .time{color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums;margin-left:auto}.seek{width:100%;accent-color:var(--lime);margin:10px 0 0}.side{display:flex;flex-direction:column;gap:14px}.section{padding:17px}.section h3{font-size:13px;margin:0 0 4px}.section .sub{font-size:11px;color:var(--muted);margin:0 0 14px}.textarea{width:100%;resize:vertical;min-height:82px;border-radius:10px;border:1px solid #344252;background:#0b1118;color:white;padding:12px;outline:none}.textarea:focus,input:focus{border-color:var(--lime)}.row{display:flex;gap:8px;margin-top:10px}.row>*{flex:1}.presets{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.preset{border:1px solid #344252;border-radius:10px;padding:0;overflow:hidden;background:#101720;text-align:left;color:white}.preset .swatch{height:58px}.preset span{display:block;padding:8px 9px;font-size:11px;font-weight:700}.preset.active{border:1px solid var(--lime);box-shadow:0 0 0 1px #c5ff4a33}.sw1{background:linear-gradient(150deg,#ffb66b,#e36e47 45%,#293c5a)}.sw2{background:linear-gradient(160deg,#bcecff,#5389aa 55%,#203d50)}.sw3{background:linear-gradient(160deg,#e9d4a1,#87965d 48%,#283a2c)}.sw4{background:linear-gradient(160deg,#aab6ff,#514a8c 50%,#17172f)}.sw5{background:linear-gradient(160deg,#f5f6fa,#a6b0ba 48%,#5d6670)}.sw6{background:linear-gradient(160deg,#4b525d,#171c24 60%,#07090d)}
+.uploadbg{display:flex;align-items:center;justify-content:center;gap:7px;border:1px dashed #465568;border-radius:9px;padding:10px;color:#d9e2ed;font-size:11px;margin-top:9px}
+.field{margin-top:13px}.field label{display:flex;justify-content:space-between;color:#b9c5d2;font-size:11px;margin-bottom:6px}.field input[type=range]{width:100%;accent-color:var(--lime)}.field input[type=color]{width:100%;height:34px;background:transparent;border:0}.note{font-size:10px;color:#a9b5c3;background:#101923;border:1px solid #293747;border-radius:9px;padding:10px;line-height:1.5}.note b{color:#e8f2fc}.footer{color:#69788a;text-align:center;font-size:10px;margin-top:25px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#eaffbd;color:#1a230c;padding:11px 16px;border-radius:10px;font-weight:750;font-size:12px;box-shadow:0 8px 30px #0008;display:none;z-index:9}
+input[type=file]{display:none}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.heading{align-items:start;flex-direction:column}.top{padding:0 4vw}main{padding:25px 4vw 45px}}
+@media(max-width:480px){.topright .pill{display:none}.presets{grid-template-columns:repeat(2,1fr)}.stage{padding:10px}.section{padding:14px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand"><div class="logo">⚡</div>OWNER IS 563_PARKER</div><div class="topright"><span class="pill">BROWSER STUDIO</span><span>Free editor · No account</span></div></header>
+<main>
+ <div class="heading"><div><div class="eyebrow">Your ride. Any world.</div><h1>Make your ride look unreal.</h1><p>Bring your riding clips into a new scene. Upload a video, choose a backdrop, and preview your edit.</p></div><div class="status">● LOCAL EDITING · YOUR FILES STAY ON THIS DEVICE</div></div>
+ <div class="layout">
+  <section class="panel">
+   <div class="panelhead"><strong>VIDEO PREVIEW</strong><span class="tiny" id="fileLabel">No video loaded</span></div>
+   <div class="stage">
+    <div class="screen" id="screen"><div class="empty" id="empty"><div class="uploadicon">↑</div><h3>Drop your riding video here</h3><p>MP4, MOV, or WebM · Processed in your browser</p><button class="btn primary" id="chooseVideo">UPLOAD VIDEO</button></div><canvas id="canvas"></canvas></div>
+    <video id="video" playsinline muted style="display:none"></video>
+    <input type="file" id="videoFile" accept="video/*">
+    <input type="file" id="bgFile" accept="image/*">
+    <div class="controls"><button class="btn secondary" id="playBtn">▶ Play</button><button class="btn secondary" id="restartBtn">↺ Restart</button><button class="btn secondary" id="fitBtn">⤢ Fit</button><span class="time" id="time">00:00 / 00:00</span></div>
+    <input class="seek" type="range" id="seek" min="0" max="1000" value="0">
+    <div class="controls"><button class="btn primary" id="exportBtn">↓ SAVE / DOWNLOAD VIDEO</button><button class="btn secondary" id="downloadFrame">Save preview frame</button><span class="tiny" id="exportState"></span></div>\n    <div class="tiny" style="margin-top:8px">On a phone, use the share sheet and choose <b>Save Video</b> or <b>Save to Files</b>. On a computer, the file downloads to your Downloads folder.</div>
+   </div>
+  </section>
+  <aside class="side">
+   <section class="panel"><div class="section"><h3>Describe your new world</h3><p class="sub">Type a scene and apply a matching built-in look.</p><textarea class="textarea" id="prompt" placeholder="Example: riding through a desert at golden hour, huge mountains in the distance..."></textarea><div class="row"><button class="btn primary" id="applyPrompt">✦ GENERATE BACKGROUND</button><button class="btn secondary" id="clearPrompt">Clear</button></div></div></section>
+   <section class="panel"><div class="section"><h3>Choose a scene</h3><p class="sub">Pick a backdrop for your clip.</p><div class="presets" id="presets">
+    <button class="preset active" data-bg="sunset"><div class="swatch sw1"></div><span>Desert sunset</span></button>
+    <button class="preset" data-bg="coast"><div class="swatch sw2"></div><span>Ocean coast</span></button>
+    <button class="preset" data-bg="forest"><div class="swatch sw3"></div><span>Forest trail</span></button>
+    <button class="preset" data-bg="night"><div class="swatch sw4"></div><span>Neon night</span></button>
+    <button class="preset" data-bg="snow"><div class="swatch sw5"></div><span>Snow mountains</span></button>
+    <button class="preset" data-bg="dark"><div class="swatch sw6"></div><span>Dark studio</span></button>
+   </div><label class="uploadbg" for="bgFile">＋ Upload your own background image</label></div></section>
+   <section class="panel"><div class="section"><h3>Keep the rider & bike</h3><p class="sub">Chroma key works with green-screen footage.</p><div class="field"><label>Key color <span id="colorText">#00ff00</span></label><input type="color" id="keyColor" value="#00ff00"></div><div class="field"><label>Key strength <span id="tolText">90</span></label><input type="range" id="tolerance" min="10" max="220" value="90"></div><div class="field"><label>Edge softness <span id="softText">35</span></label><input type="range" id="softness" min="0" max="100" value="35"></div><div class="field"><label><span>Enable green-screen removal</span><input type="checkbox" id="keyEnabled" checked style="accent-color:var(--lime)"></label></div><div class="note"><b>Important:</b> This free demo removes a selected solid-color screen (usually green) and composites the rider/bike over your scene. It does not yet have the AI subject segmentation needed to cut a rider and motorcycle out of ordinary footage. No paid API is used.</div></div></section>
+  </aside>
+ </div>
+ <div class="footer">OWNER IS 563_PARKER STUDIO · Free browser demo · Video processing happens locally on your device</div>
+</main><div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id), video=$('video'), canvas=$('canvas'), ctx=canvas.getContext('2d',{willReadFrequently:true});
+let bg='sunset',bgImage=null,raf=0,recording=false;
+const scenes={
+ sunset:['#ffc17b','#e16d4d','#293b59'],coast:['#bcecff','#5389aa','#203d50'],
+ forest:['#d7c58d','#7c925d','#263a2c'],night:['#b5bfff','#514a8c','#17172f'],
+ snow:['#f5f8fb','#a6b7c5','#536878'],dark:['#4c5866','#171e28','#07090d']
+};
+function toast(s){const t=$('toast');t.textContent=s;t.style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.style.display='none',2600)}
+function fmt(s){if(!isFinite(s))return'00:00';return String(Math.floor(s/60)).padStart(2,'0')+':'+String(Math.floor(s%60)).padStart(2,'0')}
+function setScene(name){bg=name;bgImage=null;document.querySelectorAll('.preset').forEach(b=>b.classList.toggle('active',b.dataset.bg===name));draw()}
+function drawBackground(w,h){
+ if(bgImage){let r=Math.max(w/bgImage.width,h/bgImage.height),dw=bgImage.width*r,dh=bgImage.height*r;ctx.drawImage(bgImage,(w-dw)/2,(h-dh)/2,dw,dh);return}
+ const c=scenes[bg]||scenes.sunset,g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,c[0]);g.addColorStop(.55,c[1]);g.addColorStop(1,c[2]);ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+ // subtle layered horizon / atmosphere
+ ctx.fillStyle='rgba(8,15,25,.18)';ctx.beginPath();ctx.moveTo(0,h*.72);ctx.lineTo(w*.18,h*.47);ctx.lineTo(w*.32,h*.68);ctx.lineTo(w*.54,h*.43);ctx.lineTo(w*.72,h*.7);ctx.lineTo(w,h*.48);ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.fill();
+ ctx.fillStyle='rgba(255,255,255,.08)';ctx.beginPath();ctx.arc(w*.78,h*.23,Math.min(w,h)*.09,0,Math.PI*2);ctx.fill();
+}
+function draw(){
+ if(!video.videoWidth)return;
+ const w=video.videoWidth,h=video.videoHeight;if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}
+ drawBackground(w,h);ctx.drawImage(video,0,0,w,h);
+ if($('keyEnabled').checked){
+  const frame=ctx.getImageData(0,0,w,h),d=frame.data,hex=$('keyColor').value;
+  const kr=parseInt(hex.slice(1,3),16),kg=parseInt(hex.slice(3,5),16),kb=parseInt(hex.slice(5,7),16);
+  const tol=+$('tolerance').value,soft=+$('softness').value;
+  for(let i=0;i<d.length;i+=4){
+   const dr=d[i]-kr,dg=d[i+1]-kg,db=d[i+2]-kb,dist=Math.sqrt(dr*dr+dg*dg+db*db);
+   if(dist<tol)d[i+3]=0;else if(soft>0&&dist<tol+soft)d[i+3]=Math.round(255*(dist-tol)/soft);
+  }
+  ctx.putImageData(frame,0,0);
+ }
+}
+function loop(){if(video.readyState>=2)draw();if(!video.paused&&!video.ended)raf=requestAnimationFrame(loop)}
+$('chooseVideo').onclick=()=>$('videoFile').click();
+$('screen').addEventListener('dragover',e=>{e.preventDefault();$('screen').style.outline='2px solid #c5ff4a'});
+$('screen').addEventListener('dragleave',()=>$('screen').style.outline='');
+$('screen').addEventListener('drop',e=>{e.preventDefault();$('screen').style.outline='';const f=e.dataTransfer.files[0];if(f&&f.type.startsWith('video/'))loadVideo(f);else toast('Please drop a video file.')});
+$('videoFile').onchange=e=>{if(e.target.files[0])loadVideo(e.target.files[0])};
+function loadVideo(file){video.src=URL.createObjectURL(file);video.load();$('fileLabel').textContent=file.name;$('empty').style.display='none';canvas.style.display='block';video.onloadedmetadata=()=>{draw();updateTime();toast('Video loaded — choose a background.')}} 
+$('bgFile').onchange=e=>{const f=e.target.files[0];if(!f)return;const im=new Image();im.onload=()=>{bgImage=im;document.querySelectorAll('.preset').forEach(b=>b.classList.remove('active'));draw();toast('Custom background added.')};im.src=URL.createObjectURL(f)};
+$('playBtn').onclick=()=>{if(!video.src)return toast('Upload a video first.');if(video.paused){video.play();$('playBtn').textContent='Ⅱ Pause';loop()}else{video.pause();$('playBtn').textContent='▶ Play'}};
+$('restartBtn').onclick=()=>{if(!video.src)return;video.currentTime=0;video.play();$('playBtn').textContent='Ⅱ Pause';loop()};
+$('fitBtn').onclick=()=>{canvas.style.objectFit='contain';toast('Preview fitted to screen.')};
+video.addEventListener('timeupdate',updateTime);function updateTime(){if(!video.duration)return;$('time').textContent=fmt(video.currentTime)+' / '+fmt(video.duration);$('seek').value=video.currentTime/video.duration*1000}
+$('seek').oninput=e=>{if(video.duration)video.currentTime=+e.target.value/1000*video.duration};
+video.addEventListener('seeked',draw);video.addEventListener('pause',()=>{$('playBtn').textContent='▶ Play';cancelAnimationFrame(raf);draw()});
+$('presets').onclick=e=>{const b=e.target.closest('.preset');if(b)setScene(b.dataset.bg)};
+$('applyPrompt').onclick=()=>{const p=$('prompt').value.toLowerCase();if(!p.trim())return toast('Type a scene description first.');let s='sunset';if(/ocean|beach|coast|sea|water/.test(p))s='coast';else if(/forest|woods|jungle|trail|tree/.test(p))s='forest';else if(/night|neon|city|cyber|dark/.test(p))s='night';else if(/snow|ice|winter|mountain/.test(p))s='snow';else if(/studio|black|dark/.test(p))s='dark';setScene(s);toast('Scene applied. Choose a preset or upload an image for a closer match.')};
+$('clearPrompt').onclick=()=>{$('prompt').value='';toast('Prompt cleared.')};
+$('keyColor').oninput=e=>{$('colorText').textContent=e.target.value;draw()};
+$('tolerance').oninput=e=>{$('tolText').textContent=e.target.value;draw()};
+$('softness').oninput=e=>{$('softText').textContent=e.target.value;draw()};
+$('keyEnabled').onchange=draw;
+$('downloadFrame').onclick=()=>{if(!video.src)return toast('Upload a video first.');draw();const a=document.createElement('a');a.download='ridefx-preview.png';a.href=canvas.toDataURL('image/png');a.click()};
+$('exportBtn').onclick=async()=>{
+ if(!video.src)return toast('Upload a video first.');
+ if(!canvas.captureStream||!window.MediaRecorder)return toast('Video export is not supported in this browser. Try a recent version of Chrome, Edge, or Safari.');
+ if(recording)return;
+ recording=true;$('exportBtn').disabled=true;$('exportState').textContent='Recording your edited video…';
+ const stream=canvas.captureStream(30),sourceStream=(video.captureStream&&video.captureStream())||(video.mozCaptureStream&&video.mozCaptureStream());if(sourceStream)sourceStream.getAudioTracks().forEach(t=>stream.addTrack(t));const chunks=[];
+ const mimeTypes=['video/mp4;codecs=h264','video/mp4','video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'];
+ const mimeType=mimeTypes.find(t=>MediaRecorder.isTypeSupported(t))||'';
+ let rec;
+ try{rec=new MediaRecorder(stream,mimeType?{mimeType}:undefined)}catch(e){stream.getTracks().forEach(t=>t.stop());recording=false;$('exportBtn').disabled=false;$('exportState').textContent='';return toast('Could not start video export in this browser.')}
+ const actualType=rec.mimeType||mimeType||'video/webm',extension=actualType.includes('mp4')?'mp4':'webm';
+ rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+ rec.onstop=async()=>{
+  const blob=new Blob(chunks,{type:actualType}),filename='ridefx-edited.'+extension,file=new File([blob],filename,{type:actualType});
+  try{
+   if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+    $('exportState').textContent='Opening phone save/share options…';
+    await navigator.share({files:[file],title:'My OWNER IS 563_PARKER video',text:'My edited riding video'});
+    toast('Choose Save Video or Save to Files in the share menu.');
+   }else{
+    const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),15000);
+    toast('Video download started. Check your Downloads folder.');
+   }
+   $('exportState').textContent='Export ready';
+  }catch(err){
+   if(err.name!=='AbortError')toast('Export finished. Use your browser download option to save the file.');
+   $('exportState').textContent='Export ready';
+  }
+  stream.getTracks().forEach(t=>t.stop());recording=false;$('exportBtn').disabled=false;
+ };
+ video.currentTime=0;
+ try{await video.play();loop();rec.start();video.onended=()=>{if(rec.state!=='inactive')rec.stop();video.onended=null};}
+ catch(e){if(rec.state!=='inactive')rec.stop();toast('Tap play permission if your browser asks, then export again.')}
+ 
+};
+</script>
+</body></html>
